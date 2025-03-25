@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking - Sign Up</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom gradient background */
+        body {
+            background: linear-gradient(135deg, #f97316, #f59e0b); /* Orange gradient */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sign-up-form {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            border-radius: 8px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Sign-Up Form -->
+    <div class="sign-up-form">
+        <h2 class="text-white text-3xl font-semibold text-center mb-6">Sign Up</h2>
+        <form id="sign-up-form" action="#" method="POST" class="space-y-4">
+            <!-- Name Input -->
+            <input type="text" name="name" id="name" placeholder="Full Name" class="w-full p-3 rounded-md bg-white bg-opacity-20 text-white placeholder-white border border-transparent focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+
+            <!-- Email Input -->
+            <input type="email" name="email" id="email" placeholder="Email Address" class="w-full p-3 rounded-md bg-white bg-opacity-20 text-white placeholder-white border border-transparent focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+
+            <!-- Password Input -->
+            <input type="password" name="password" id="password" placeholder="Password" class="w-full p-3 rounded-md bg-white bg-opacity-20 text-white placeholder-white border border-transparent focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+
+            <!-- Confirm Password Input -->
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="w-full p-3 rounded-md bg-white bg-opacity-20 text-white placeholder-white border border-transparent focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full p-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition ease-in-out">Sign Up</button>
+
+            <!-- Sign In Link -->
+            <p class="text-center text-white mt-4">
+                Already have an account? <a href="login.html" class="text-orange-500 hover:text-orange-400">Sign In</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.getElementById("sign-up-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm_password").value;
+
+            if (name && email && password && confirmPassword) {
+                if (password === confirmPassword) {
+                    // For demonstration, we will just show an alert. Replace with your logic.
+                    alert(`Sign Up Successful!\nName: ${name}\nEmail: ${email}`);
+                    // Redirect to another page after successful sign-up (Example: flight booking page)
+                    window.location.href = "flight-booking.html"; // Replace with your flight booking page URL
+                } else {
+                    alert("Passwords do not match.");
+                }
+            } else {
+                alert("Please fill out all fields.");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter","sans-serif";
+}
+
+body {
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.first {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; 
+    display: grid;
+    grid-template-columns: 130px 208px 205px 377px 154px 250px;
+    font-family: "Inter","sans-serif";
+    align-items: center;
+    padding: 10px 20px; 
+    z-index: 1000;
+    background-color: transparent;
+    background-color: #ff6200;
+}
+
+
+.first .nav{
+    margin-left: 10px;
+    display: flex;
+    gap:25px;
+    font-size: 17px;
+    background-color: transparent;
+    grid-column: 4/5;
+}
+.first .nav p:hover{
+    color: black;
+    font-weight: bold;
+    text-shadow: black;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #F76641;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.first .nav a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+.first .nav a:visited {
+    color: inherit; 
+    text-decoration: none;
+}
+
+
+.first .nav p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2px;
+    background-color: transparent;
+}
+.first .nav p svg{
+    width: 20px;
+    background-color: transparent;
+}
+.first .logo{
+    font-weight:bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    background-color: transparent;
+    grid-column:2/3;
+    color: #000;
+}
+
+.first .logo img{
+    width:40px;
+    background-color: transparent;
+
+}
+.first .login .btn-1{
+    background-color: black;
+    color:#ff6200;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-family: "Inter","sans-serif";
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.7);
+} 
+.first .login .btn-1:hover{
+    color:black;
+    background-color: #ff6200;
+    transition: 0.2s;
+    transform: scale(1.05);
+    font-weight: bold;
+    box-shadow: #000 ;
+    cursor: pointer;
+}
+.first .login .btn-2{
+    background-color: #ff6200;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-family: "Inter","sans-serif";
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.7);
+}
+.first .login .btn-2:hover{
+    color:#ff6200;
+    background-color: black;
+    transition: 0.2s;
+    transform: scale(1.05);
+    font-weight: bold;
+    box-shadow: #000 ;
+    cursor: pointer;
+}
+.first .login p{
+    background-color: transparent;
+    font-size: 17px;
+    font-style: "Inter","sans-serif";
+}
+.first .login p:hover{
+    color: black;
+    text-shadow: black;
+    text-shadow: 2px 2px 4px #000;
+    transition: 0.2s;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.about-section {
+    background-color: #2d2d2d;
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 80px;
+}
+
+.about-section h2 {
+    color: #ff6200;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #ff6200;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.about-section p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: #d9d9d9;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.mission-vision div {
+    background-color: #3c3c3c;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.mission-vision h3 {
+    color: #ff6200;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 3px solid #ff6200;
+}
+
+.team-member h3 {
+    color: #ff6200;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.team-member p {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+}
+
+.stats {
+    background-color: #ff6200;
+    color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.stats div h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #ff6200;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
